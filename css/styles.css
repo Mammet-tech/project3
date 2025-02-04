@@ -40,14 +40,17 @@ ul {
   display: flex;
   justify-content: space-around;
 }
+
 .home {
   color: black;
   font-size: 30px;
   font-weight: bold;
   font-family: "Roboto", sans-serif;
-  text-align: center;
-  margin-top: 10px;
-  border-width: 600px;
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 150px;
+  padding: 20px;
+    text-align: center;
 }
 
 footer {
