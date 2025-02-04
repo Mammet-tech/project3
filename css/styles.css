@@ -10,6 +10,20 @@
   background-attachment: fixed;
   background-size: cover;
 }
+.notes {
+  background-image: url("../images/background2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.contact {
+  background-image: url("../images/background3.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+}
 
 nav {
   color: black;
@@ -33,4 +47,15 @@ ul {
   font-family: "Roboto", sans-serif;
   text-align: center;
   margin-top: 10px;
+  border-width: 600px;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
 }
