@@ -1,3 +1,4 @@
+document.addEventListener("DOMContentLoaded", displayNotes);
 document.getElementById("button").addEventListener("click", saveNote);
 function saveNote() {
   let note = document.getElementById("note").value;
@@ -6,15 +7,15 @@ function saveNote() {
     return;
   }
   let notes = localStorage.getItem("notes");
-    if (notes === null) {
-      notes = [];
-    } else {    
-      notes = JSON.parse(notes);
-    }
-    notes.push(note);
-    localStorage.setItem("notes", JSON.stringify(notes));
-    document.getElementById("note").value = "";
-    displayNotes();
+  if (notes === null) {
+    notes = [];
+  } else {
+    notes = JSON.parse(notes);
+  }
+  notes.push(note);
+  localStorage.setItem("notes", JSON.stringify(notes));
+  document.getElementById("note").value = "";
+  displayNotes();
 }
 
 function displayNotes() {
@@ -23,11 +24,44 @@ function displayNotes() {
     return;
   }
   notes = JSON.parse(notes);
-  let ul = document.getElementById("notes");
-  ul.innerHTML = "";
-  notes.forEach(function(note) {
-    let li = document.createElement("li");
-    li.innerHTML = note;
-    ul.appendChild(li);
+  let notesContainer = document.getElementById("notesContainer");
+  notesContainer.innerHTML = "";
+  notes.forEach(function (note, index) {
+    let noteElement = document.createElement("div");
+    noteElement.className = "note";
+    noteElement.innerHTML = index + 1 + ". " + note;
+    notesContainer.appendChild(noteElement);
+
+
+    let editButton = document.createElement("span");
+    editButton.textContent = "Edit";
+    editButton.className = "edit";
+    editButton.addEventListener("click", function () {
+      editNote(index);
+    });
+    noteElement.appendChild(editButton);
+
+    let deleteButton = document.createElement("span");
+    deleteButton.textContent = "Delete";
+    deleteButton.className = "delete";
+    deleteButton.addEventListener("click", function () {
+      deleteNote(index);
+    });
+    noteElement.appendChild(deleteButton);    
   });
 }
+
+
+function editNote(index) {
+  let notes = localStorage.getItem("notes");
+    notes = JSON.parse(notes);
+    let newNote = prompt("Enter new note", notes[index]);
+    if (newNote === null) {
+        return;
+    }
+    notes[index] = newNote;
+    localStorage.setItem("notes", JSON.stringify(notes));
+    displayNotes();
+}
+
+
