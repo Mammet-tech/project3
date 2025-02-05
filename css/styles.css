@@ -11,14 +11,14 @@
   background-size: cover;
 }
 .notes {
-  background-image: url("../images/background2.jpg");
+  background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
   background-size: cover;
 }
 .contact {
-  background-image: url("../images/background3.jpg");
+  background-image: url("../images/background2.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-attachment: fixed;
