@@ -19,27 +19,38 @@ Fully responsive design for seamless use on mobile and desktop.
 1. Saving a Note
 
 Input: User enters text and clicks the "Save" button.
+
 Output: The note is displayed in the list and stored in local storage.
+
 2. Editing a Note
 
 Input: User clicks the "Edit" option, modifies the note, and confirms the change.
+
 Output: The note is updated with the new content.
+
 3. Deleting a Note
 
 Input: User clicks the "Delete" option for a specific note.
+
 Output: The selected note is removed from the list and local storage.
+
 4. Empty Note Submission
 
 Input: User tries to save an empty note.
+
 Output: An alert message is displayed requesting input.
+
 5. Notes Persistence
 
 Input: User refreshes the page after saving notes.
+
 Output: Notes remain saved and displayed due to local storage.
 
 ## Technologies Used
 HTML - Structure of the web pages.
+
 CSS - Styling and layout for responsiveness.
+
 JavaScript - Handles interactivity and local storage.
 ## Contact Information
 Email: edwinmammet19@gmail.com
