@@ -127,6 +127,9 @@ button {
   border-radius: 6px;
 }
 
+button:hover {
+  background-color: #45a049;
+}
 footer {
   background-color: black;
   color: white;
@@ -159,3 +162,25 @@ footer {
   text-decoration: underline;
   color: darkblue;
 }
+
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+form label {
+    display: block;
+    font-weight: bold;    
+    font-size: 20px;
+}
+
+form input, form textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: lighter;
+    margin: 10px 0;
+}
+
